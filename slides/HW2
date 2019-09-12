@@ -1,0 +1,211 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter your first integer:  10\n",
+      "Enter your second integer:  20\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The sum is:  30\n"
+     ]
+    }
+   ],
+   "source": [
+    "num1 = input('Enter your first integer: ')\n",
+    "10\n",
+    "num2 = input('Enter your second integer: ')\n",
+    "20\n",
+    "print('The sum is: ', int(num1) + int(num2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'num1' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "\u001b[0;32m<ipython-input-2-2c3b835efcf2>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'The sum is: '\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnum1\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnum2\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m: name 'num1' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "print('The sum is: ', int(num1) + int(num2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Assigned the variable on how much the height and base is. This will be used to calculate the area.\n",
+    "height=2\n",
+    "base=3\n",
+    "#Now I can write the formula consisting of these variables. The result is a new variable and if you print it, it gives you a result of the are\n",
+    "area=(height*base)/2\n",
+    "#to get the answer of our area calculation you need to used the reserved word print \n",
+    "print(area)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'bool'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(type(True))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "IndentationError",
+     "evalue": "unexpected indent (<ipython-input-13-f3dcfb962f4c>, line 2)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-13-f3dcfb962f4c>\"\u001b[0;36m, line \u001b[0;32m2\u001b[0m\n\u001b[0;31m    if choice ==\"a\":\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unexpected indent\n"
+     ]
+    }
+   ],
+   "source": [
+    "choice = input(\"Enter your guess (a, b, or, c):\")\n",
+    "    if choice ==\"a\":\n",
+    "        print(\"Bad guess\")\n",
+    "    else:\n",
+    "        if choice == \"b\":\n",
+    "            print(\"good guess\")\n",
+    "    else:\n",
+    "        if choice == \"c\":\n",
+    "            print(\"close, but not correct\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Please enter a grade as a number:  90\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Q2 chained conditional\n",
+    "#Need to capture non-numeric outputs \n",
+    "# and outside of (0,100)\n",
+    "#all grades are integers\n",
+    "#what do you do with non-integers!!\n",
+    "#Need to capture all numeric inputs\n",
+    "#Assumption no floats, if your run 90.0 \n",
+    "grade=input(\"Please enter a grade as a number: \") #remember this is a string\n",
+    "try: #convert string to intiger\n",
+    "    grade=int(grade)\n",
+    "    if (grade >= 90 and grade <= 100):\n",
+    "        print (\"A\")\n",
+    "    elif(grade >= 80 and grade <= 89):\n",
+    "        print(\"B\")\n",
+    "    elif(grade >= 70 and grade <= 79):\n",
+    "        print(\"C\")\n",
+    "    elif(grade >= 60 and grade <= 69):\n",
+    "        print(\"D\")\n",
+    "    elif(grade >= 0 and grade <= 59):\n",
+    "        print(\"F\")\n",
+    "    else:\n",
+    "        print(\"Enter a legit number please\")\n",
+    "except:\n",
+    "        print(\"Enter a legit number please\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-15-6623f2582527>, line 1)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-15-6623f2582527>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    elif(grade >= 80 and grade <= 89)\u001b[0m\n\u001b[0m       ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
